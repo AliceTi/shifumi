@@ -11,88 +11,135 @@
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/db3d5f8fee.js" crossorigin="anonymous"></script>
     <!--google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <!--notre css-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="container-fluid blackGradient">
-    <header class="row py-3 fixed-top d-flex justify-content-center aligm-items-center">
-        <img id="logo" class="py-2" src="assets/imgs/logo.svg">
-    </header>
+        <header class="row py-3 d-flex justify-content-center aligm-items-center">
+            <img id="logo" class="py-2" src="assets/imgs/logo.svg" alt="logo du site mini-jeu Shifumi">
+        </header>
 
-
-    <main class="row">
-        <div class="col-lg-4 px-5">
-            <div class="d-flex flex-column">
-                <img class="gesteUser ui-widget-content" id="pierreUser" src="assets/imgs/pierre.svg" alt="pierre">
-                <img class="gesteUser ui-widget-content" id="feuilleUser" src="assets/imgs/feuille.svg" alt="feuille">
-                <img class="gesteUser ui-widget-content" id="ciseauxUser" src="assets/imgs/ciseaux.svg" alt="ciseaux">
-            </div>
-            <div class="d-flex flex-column align-items-center">
-            <img id="personnage" class="py-3" src="assets/imgs/persoTrex.svg">
-            </div>
-            <div>
-                <p>
-                    <span id="pseudoUser" class="pr-3">Pseudo</span>
-                    <i class="fas fa-heart px-1"></i><i class="fas fa-heart px-1"></i><i class="fas fa-heart px-1"></i>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-4 pb-5 d-flex align-items-center">
-            <div class="row d-flex align-items-center">
-            <div class="col-4 d-flex justify-content-center"><div id="cercleUser" class="rounded-circle ui-widget-header"></div></div>
-            <div class="col-4 d-flex flex-column align-items-bottom">
-                <div class="row d-flex flex-column justify-content-center align-items-center">
-                    <h1>VS</h1>
-                </div>
-                <div class="row d-flex flex-column justify-content-center align-items-center">
-                    <h2>Round <span id="roundNumber">X</span></h2>
-                    <p id=score><span id="scoreNumberUser">X</span>/<span id="scoreNumberMonster">X</span></p>
+        <main class="row d-flex flex-lg-row flex-md-column flex-md-column-reverse flex-sm-column-reverse flex-column-reverse">
+            <div class="col-lg-4 col-md-12 pl-5 d-flex align-items-end ">
+                <div id="user" class="mr-5">                
+                    <div id="originParent" class="d-flex flex-lg-column flex-md-row align-items-lg-start align-items-md-center justify-content-end">
+                        <div class="mx-2">                    
+                            <img class="gesteUser" id="pierreUser" draggable="true" src="assets/imgs/pierre.svg" alt="pierre">
+                        </div>
+                        <div class="mx-4">                    
+                            <img class="gesteUser" id="feuilleUser" draggable="true" src="assets/imgs/feuille.svg" alt="feuille">
+                        </div>
+                        <div class="mx-3">                    
+                            <img class="gesteUser" id="ciseauxUser" draggable="true" src="assets/imgs/ciseaux.svg" alt="ciseaux">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-lg-column flex-md-row align-items-center">
+                        <div class="mr-4">
+                            <img id="personnage" src="assets/imgs/persoTrex.svg" alt="votre personnage">
+                        </div>
+                        <div class="ml-4">
+                            <p>
+                                <span id="pseudoUser" class="pr-3">Pseudo</span>
+                                <i class="fas fa-heart px-1" id="lifeUser1"></i>
+                                <i class="fas fa-heart px-1" id="lifeUser2"></i>
+                                <i class="fas fa-heart px-1" id="lifeUser3"></i>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-4 d-flex justify-content-center">
-                <div id="cercleMonster" class="d-flex align-items-center justify-content-center rounded-circle">
-                <img id="randomPic" src=""/>
-                <img class="gesteMonster" id="pierreMonster" src="assets/imgs/pierre.svg" alt="pierre">
-                <img class="gesteMonster" id="feuilleMonster" src="assets/imgs/feuille.svg" alt="feuille">
-                <img class="gesteMonster" id="ciseauxMonster" src="assets/imgs/ciseaux.svg" alt="ciseaux">
+            <div class="col-lg-4 col-md-12 mb-4 d-flex align-items-center justify-content-center">
+                <div id="cercles" class="row d-flex flex-column align-items-center">
+                    <div class="row d-flex flex-row justify-content-around">
+                        <div id="cercleUser"  class="rounded-circle d-flex justify-content-center">
+                            <img id="userAnswer" src="" alt="">
+                        </div>
+                        <h1 class="mb-2">VS</h1>
+                        <div id="cercleMonster" class="d-flex align-items-center justify-content-center rounded-circle">
+                            <img class="gesteMonster" id="pierreMonster" src="assets/imgs/pierre.svg" alt="pierre">
+                            <img class="gesteMonster" id="feuilleMonster" src="assets/imgs/feuille.svg" alt="feuille">
+                            <img class="gesteMonster" id="ciseauxMonster" src="assets/imgs/ciseaux.svg" alt="ciseaux">
+                        </div>
+                    </div>
+                    <div class="row mt-4 mb-2 d-flex flex-column justify-content-center align-items-center">
+                        <h2>Round <span id="roundNumber">1</span></h2>
+                    </div>
+                    <div class="row my-2 d-flex flex-column align-items-center">
+                        <h2 id=score><span id="scoreNumberUser">0</span>/<span id="scoreNumberMonster">0</span>
+                        </h2>
+                    </div>
                 </div>
             </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 px-5">
-            <div class="d-flex flex-column align-items-center">
-            <img id="vilain" class="py-3" src="assets/imgs/monster1.png">
-            </div>
-            <div class="d-flex flex-column align-items-end">
-                <div>                
-                    <p>
-                        <i class="fas fa-heart px-1"></i><i class="fas fa-heart px-1"></i><i class="fas fa-heart px-1"></i>
-                        <span id="pseudoMonster" class="pl-3">Monstre</span>
-                    </p>
+            <div class="col-lg-4 col-md-12 mt-3 d-flex align-items-end justify-content-end">
+                <div id="monster" class="pr-5">                
+                    <div class="d-flex flex-lg-column flex-md-row-reverse flex-sm-row-reverse flex-row-reverse align-items-center">
+                        <div class="ml-2 d-flex align-items-end">
+                            <img class="vilain" id="monster1" src="assets/imgs/monster1.png" alt="monstre d'eau">
+                            <img class="vilain" id="monster2" src="assets/imgs/monster2.png" alt="vampire">
+                            <img class="vilain" id="monster3" src="assets/imgs/monster3.png" alt="la mort">
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-right">
+                                <i class="fas fa-heart px-1" id="lifeMonster1"></i>
+                                <i class="fas fa-heart px-1" id="lifeMonster2"></i>
+                                <i class="fas fa-heart px-1" id="lifeMonster3"></i>
+                                <span id="pseudoMonster" class="pl-3">Maurice</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer class="row">
-        <nav class="navbar navbar-expand-lg fixed-bottom">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"><i class="fas fa-info-circle text-white"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link text-white mr-2" href="#">Mentions légales</a>
-                <a class="nav-link text-white mr-2" href="#">CGU</a>
-                <a class="nav-link text-white mr-2" href="#">Copyright</a>
-                <a class="nav-link text-white mr-2" href="#">Politique de confidentialité</a>
+        </main>
+        <div class="modal" tabindex="-1" id="modalWin">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body d-flex flex-column align-items-center">
+                <h3 class="modal-title m-3">YOU WIN !</h3>
+                  <p class="m-3">Voici ton pourcentage de victoire : <span id="pourcentageVictoire">0</span>%</p>
+                  <button type="button" class="btn btn-secondary m-3" data-dismiss="modal">Rejouer</button>
+                </div>
               </div>
             </div>
-          </nav>
-    </footer>
+          </div>
+          <div class="modal" tabindex="-1" id="modalLoose">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <h3 class="modal-title m-3">GAME OVER !</h3>
+                    <button type="button" class="btn btn-secondary m-3" data-dismiss="modal">Rejouer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal" tabindex="-1" id="modalClash">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                    <p><span id="textClash"></span></p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times text-center text-white"></i>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <footer class="row">
+            <nav class="navbar navbar-expand-lg fixed-bottom">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-info-circle text-white"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-white mr-2" href="#">Mentions légales</a>
+                    <a class="nav-link text-white mr-2" href="#">CGU</a>
+                    <a class="nav-link text-white mr-2" href="#">Copyright</a>
+                    <a class="nav-link text-white mr-2" href="#">Politique de confidentialité</a>
+                </div>
+                </div>
+            </nav>
+        </footer>
     </div>
     <!--bootstrap-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -102,50 +149,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--notre feuille js-->
-    <script>
-        $( function(){
-            var pierreMonster = $("#pierreMonster");
-            var feuilleMonster = $("#feuilleMonster");
-            var ciseauxMonster = $("#ciseauxMonster");
-            gestesMonster=[pierreMonster , feuilleMonster , ciseauxMonster]
-            gestesMonster.forEach(element => {
-                element.hide();
-            });
-
-            $(".gesteUser").draggable({revert:true});
-            $("#cercleUser").droppable({
-                drop: function(event,ui){
-                userChoice = $(ui.draggable).attr('id');
-                console.log(userChoice);}
-            }
-            );
-
-            function randomNumber(max){
-                return Math.floor((Math.random()*max)+1) ;
-            }
-
-            $("#cercleUser").on('drop', function(){  
-                var randomGesteMonster = randomNumber(3);       
-                    if(randomGesteMonster == 1){
-                        $("#pierreMonster").show();
-                        $("#feuilleMonster").hide();
-                        $("#ciseauxMonster").hide();
-                    }else{
-};
-                    if(randomGesteMonster == 2){
-                        $("#pierreMonster").hide();
-                        $("#feuilleMonster").show();
-                        $("#ciseauxMonster").hide();
-                    }
-                    if(randomGesteMonster == 3){
-                        $("#pierreMonster").hide();
-                        $("#feuilleMonster").hide();
-                        $("#ciseauxMonster").show();
-                    } 
-            });
-
-
-        })    
-    </script>
+    <script src="assets/js/mains.js"></script>
 </body>
 </html>
