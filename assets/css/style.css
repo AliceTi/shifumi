@@ -1,12 +1,68 @@
-img{ 
-    height: 50px;
-    width: 50px;
+body{
+    background: url(../imgs/gameBg.jpg) no-repeat center center fixed;
+}
+header{
+    height: fit-content;
+}
+#logo{
+    width: 300px;
+}
+h1{
+    font-family: 'edo';
+    font-size: 180px;
+    color: white;
+
+}
+h2 , #score{
+    font-family: 'edo';
+    font-size: 40px;
+    color: #00FFEA;
+    align-self: bottom;
+}
+#pseudoUser , #pseudoMonster{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 32px;
+    color: #00FFEA;
+}
+#vilain{
+    width: 450px;
+}
+.gesteUser{
+    z-index: 1;
+    /* transform: rotate(75deg); */
+    width: 75px;
+}
+#userAnswer {
+    transform: rotate(75deg) scaleY(1) scaleX(-1);
+    width: 75px;
+}
+.gesteMonster{
+    transform: rotate(-75deg) scaleY(1) scaleX(-1);
+    width: 75px;
+}
+#personnage{
+    width: 150px;
+}
+.fa-heart{
+    font-size: 30px;
+    color: #FF0BA2;
 }
 
-.circle {
-    height: 100px;
-    width: 100px;
-    background-color: #00FFEA;
-    border-radius: 50%;
-    display: inline-block;
+#cercleUser , #cercleMonster {
+    border-radius:50%;
+    width:140px;
+    height:140px;
+    background: #00FFEA;
 }
+.blackGradient{
+    padding-bottom: 50px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.267) ,black);
+}
+@font-face{
+    font-family: 'edo';
+    src: url(../fonts/edosz.ttf);
+}
+
