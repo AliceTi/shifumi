@@ -1,4 +1,6 @@
 //Bot caché
+
+
 $( function(){
   $("#pierreMonster").hide();
   $("#feuilleMonster").hide();
@@ -41,10 +43,16 @@ else {
 }
 
 
+$("body").mousedown(function () {
+  
+  document.getElementById('audio').play();
+
+});
 
 // drag and drop
   $(".gesteUser").draggable({
     start: function() {
+      
       startChoice = $(this).attr('id');
       console.log(startChoice);
     },
@@ -253,4 +261,11 @@ else {
     return randomGesteMonster;
   }
 });
-    
+
+//* Bouton scroll *//
+ $(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
