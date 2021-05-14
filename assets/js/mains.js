@@ -15,9 +15,33 @@ $( function(){
   var scoreNumberUser = 0;
   var scoreNumberMonster = 0;
   var round = 1;
-
 let startChoice;
 let userAnswer = $("#userAnswer");
+
+
+var persoUserImg = localStorage.getItem('persoUserImg');
+
+if(!persoUserImg || persoUserImg==null || persoUserImg=='') {
+  $('#personnage').attr('src', 'assets/imgs/persoTrex.svg');
+
+}
+else {
+  $('#personnage').attr('src', 'assets/imgs/'+persoUserImg+'.svg');
+
+}
+
+
+var pseudoUser = localStorage.getItem('persoPseudo');
+console.log(pseudoUser);
+if(!pseudoUser || pseudoUser==null || pseudoUser=='') {
+  $('#pseudoUser').text('Michel');
+}
+else {
+  $('#pseudoUser').text(pseudoUser);
+}
+
+
+
 // drag and drop
   $(".gesteUser").draggable({
     start: function() {
@@ -34,7 +58,6 @@ let userAnswer = $("#userAnswer");
       drop: function (event, ui) {
         $(userAnswer).attr("src", ui.draggable.attr("src"));
       }
-
   });
    
   //Aléatoire 
@@ -229,7 +252,5 @@ let userAnswer = $("#userAnswer");
 
     return randomGesteMonster;
   }
-
-
 });
     
