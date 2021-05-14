@@ -189,7 +189,7 @@ $("body").mousedown(function () {
         
         if(round == 5){
           $("#modalClash").show()
-          $("#textClash").text("\"Si tu penses pouvoir nous battre, tu te fourvoies jeune jouvanceau !\"");
+          $("#textClash").text("\"Si tu penses pouvoir nous battre, tu te fourvoies jeune jouvenceau !\"");
         }
         else if(round == 10){
           $("#modalClash").show()
@@ -240,5 +240,7 @@ $("body").mousedown(function () {
 
     return randomGesteMonster;
   }
+
+
 });
     
