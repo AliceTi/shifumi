@@ -1,0 +1,72 @@
+header{
+    background: url("../imgs/homeBg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+main{
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+}
+footer{
+  background-color: black;
+}
+.row{
+  margin: 0;
+  padding: 0;
+  /*border: chartreuse solid 3px;*/
+}
+#logo{
+  width: 80vw;
+}
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight:100;
+  font-size: 25px;
+}
+h2{
+  font-family: 'edo';
+  src: url(../fonts/edosz.ttf);
+  color: #00FFEA;
+  text-align: center;
+  margin-top: 50px;
+}
+.persoUser {
+  padding: 5px;
+  width:100px;
+}
+.persoUser:hover {
+  padding: 5px;
+  background-color: #00FFEA;
+}
+#pseudo{
+  font-family: 'Roboto', sans-serif;
+  padding-top:30px;
+  font-weight: bold;
+  color: #00FFEA;
+}
+.btn-primary{
+  background-color:#FF0BA2;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size:small;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family:'edo';
+  src: url(../fonts/edosz.ttf);
+}
+
+@font-face {
+  font-family:'Roboto';
+  src: url(../fonts/Roboto.ttf);
+}
