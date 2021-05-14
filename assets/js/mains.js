@@ -1,4 +1,6 @@
 //Bot caché
+
+
 $( function(){
   $("#pierreMonster").hide();
   $("#feuilleMonster").hide();
@@ -18,9 +20,18 @@ $( function(){
 
 let startChoice;
 let userAnswer = $("#userAnswer");
+
+
+$("body").mousedown(function () {
+  
+  document.getElementById('audio').play();
+
+});
+
 // drag and drop
   $(".gesteUser").draggable({
     start: function() {
+      
       startChoice = $(this).attr('id');
       console.log(startChoice);
     },
