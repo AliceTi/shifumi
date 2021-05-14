@@ -2,7 +2,7 @@ body{
     background: url(../imgs/gameBg.jpg) no-repeat center center fixed;
 }
 .blackGradient{
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.267) ,black) center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.267) ,black) center center fixed ;
     width: 100vw;
     height: 100vh;
 }
@@ -103,3 +103,14 @@ a:hover{
     font-family: 'edo';
     src: url(../fonts/edosz.ttf);
 }
+
+
+@media screen and (max-width: 680px) {
+
+    h1{ 
+       display: none;
+     }
+   
+   
+     
+   }

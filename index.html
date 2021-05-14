@@ -18,6 +18,10 @@
 </head>
 
 <body>
+    <audio  autoplay loop id="audio">
+        <source src="assets/music/zombie-hyperdrive-red-eyes.ogg" type="audio/ogg">
+        <source src="assets/music/zombie-hyperdrive-red-eyes.mp3" type="audio/mpeg"> 
+  </audio>
     <header class="row d-flex flex-column justify-content-center align-items-center">
         <img id="logo" src="assets/imgs/logo.svg" alt="logo">
         <div id="section05" class="pt-5 d-flex flex-column justify-content-center align-items-center">
@@ -29,11 +33,13 @@
             <div class="mb-5 d-flex justify-content-center">
                 <h2 id="ancre">Choisis ton personnage :</h2> 
             </div>
+            
             <div class="mb-5 d-flex flew-row justify-content-around align-items-center">
-                <div><img class="persoUser" id="persoGhost" src="assets/imgs/persoGhost.svg"></div>  
+               <div><img class="persoUser" id="persoGhost" src="assets/imgs/persoGhost.svg"></div>  
                 <div><img class="persoUser" id="persoTrex" src="assets/imgs/persoTrex.svg"></div>
                 <div><img class="persoUser" id="persoMario" src="assets/imgs/persoMario.svg"></div>
             </div>
+        
             <div class="d-flex flex-column align-items-center">
                   <label for="pseudo" id="pseudo">PSEUDO</label>
                   <input type="text" class="px-5 py-1" placeholder="Indiquer un pseudonyme">
