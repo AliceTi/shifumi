@@ -82,7 +82,9 @@ h3{
     transform: rotate(-75deg) scaleY(1) scaleX(-1);
     width: 70px;
 }
-
+.gesteMonster:hover , .gesteUser:hover{
+    cursor: pointer;
+}
 #cercleUser , #cercleMonster {
     width: 125px;
     height: 125px;

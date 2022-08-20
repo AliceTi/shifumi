@@ -99,9 +99,10 @@ h2{
   width:100px;
 }
 
-.persoUser:hover {
+.persoUser:hover{
   padding: 5px;
-  background-color: #00FFEA;
+  background-color: none;
+  cursor: pointer;
 }
 
 #pseudo{
