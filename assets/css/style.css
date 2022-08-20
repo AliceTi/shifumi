@@ -101,6 +101,7 @@ a:hover{
     color: white;
     text-decoration: none;
 }
+
 @font-face{
     font-family: 'edo';
     src: url(../fonts/edosz.ttf);
@@ -112,7 +113,10 @@ a:hover{
     h1{ 
        display: none;
      }
-   
-   
-     
+    .modal{
+        width: 100vw;
+    }
+    main{
+        margin-top: 8vh;
+    }
    }

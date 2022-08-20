@@ -59,7 +59,7 @@
             </div>
             <div class="col-lg-4 col-md-12 mb-4 d-flex align-items-center justify-content-center">
                 <div id="cercles" class="row d-flex flex-column align-items-center">
-                    <div class="row d-flex flex-row justify-content-around">
+                    <div id="cercles-play" class="d-flex flex-row justify-content-around">
                         <div id="cercleUser"  class="rounded-circle d-flex justify-content-center">
                             <img id="userAnswer" src="" alt="">
                         </div>
@@ -160,5 +160,18 @@
     
     <!--notre feuille js-->
     <script src="assets/js/mains.js"></script>
+
+    <script>
+
+        cerclesPlay = document.getElementById('cercles-play')
+
+    if ($(window).width() < 960) {
+        cerclesPlay.classList.add('column-reverse');
+    }
+    else {
+        cerclesPlay.classList.add('row');
+    }
+
+    </script>
 </body>
 </html>
